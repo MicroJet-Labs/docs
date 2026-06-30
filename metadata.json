@@ -1,0 +1,6 @@
+{
+  "name": "MicroJet",
+  "description": "The high-performance, lightweight Python web API framework built for extreme speed and developer ergonomics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
