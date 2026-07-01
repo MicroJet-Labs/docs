@@ -451,4 +451,14 @@ app.run()`}
                     <pre className="max-h-[140px] overflow-y-auto whitespace-pre text-slate-300 text-[11px] leading-relaxed select-all">
                       {JSON.stringify(terminalOutput.data, null, 2)}
                     </pre>
-</
+                    
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
