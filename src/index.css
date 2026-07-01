@@ -1,0 +1,117 @@
+@import url('https://cdn.jsdelivr.net/gh/devchauhann/fonts@v1.1.0/cdn/v1/css/all.css');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Anthropic Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Anthropic Serif", sans-serif;
+  --font-mono: "Anthropic Mono", monospace;
+  
+  --color-brand-blue: #2563eb;
+  --color-brand-cyan: #06b6d4;
+  --color-dark-bg: #030712;
+  --color-dark-card: #1f2937;
+}
+
+@layer base {
+  body {
+    background-color: #0b0f19;
+    color: #f3f4f6;
+    font-family: var(--font-sans);
+    font-weight: 300; /* আগের সমস্যার কারণে Anthropic Sans এর জন্য এটি যোগ করা হলো */
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0b0f19;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+  }
+}
+
+/* Beautiful custom diagonal slashes mimicking angular.dev mesh background */
+.slash-mesh-blue {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(59, 130, 246, 0.1) 0px,
+    rgba(59, 130, 246, 0.1) 1px,
+    transparent 1px,
+    transparent 24px
+  );
+}
+
+.slash-mesh-white {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.03) 0px,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 32px
+  );
+}
+
+/* Accent lighting effects */
+.radial-glow {
+  background: radial-gradient(circle at center, rgba(37, 99, 235, 0.18) 0%, rgba(59, 130, 246, 0.04) 50%, transparent 100%);
+}
+
+.radial-glow-cyan {
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.12) 0%, rgba(59, 130, 246, 0.05) 60%, transparent 100%);
+}
+
+/* Tech dot matrix pattern */
+.dot-grid {
+  background-image: radial-gradient(rgba(59, 130, 246, 0.12) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Interactive glow effect */
+.border-glow {
+  position: relative;
+}
+
+.border-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(to bottom right, rgba(37, 99, 235, 0.5), rgba(6, 182, 212, 0.5), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.border-glow:hover::after {
+  opacity: 1;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 0.4; } /* এখানে কেটে যাওয়া অংশটি ঠিক করা হয়েছে */
+  50% { opacity: 0.8; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s ease-in-out infinite;
+}
