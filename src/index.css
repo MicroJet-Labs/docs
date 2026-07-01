@@ -17,7 +17,7 @@
     background-color: #0b0f19;
     color: #f3f4f6;
     font-family: var(--font-sans);
-    font-weight: 300; /* আগের সমস্যার কারণে Anthropic Sans এর জন্য এটি যোগ করা হলো */
+    font-weight: 400; /* আগের সমস্যার কারণে Anthropic Sans এর জন্য এটি যোগ করা হলো */
     overflow-x: hidden;
   }
 
