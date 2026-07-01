@@ -1,6 +1,13 @@
 @import url('https://cdn.jsdelivr.net/gh/devchauhann/fonts@v1.1.0/cdn/v1/css/all.css');
 @import "tailwindcss";
-
+@font-face {
+  font-family: 'Anthropic Sans';
+  src: url('https://cdn.jsdelivr.net/gh/devchauhann/fonts@main/cdn/v1/fonts/AnthropicSans@300.woff2') format('woff2');
+  font-weight: 100 900; /* এটি সব ধরণের ফন্ট ওয়েট কভার করবে */
+  font-style: normal;
+  font-display: swap;
+  /* এখানে unicode-range বাদ দেওয়া হয়েছে, যাতে সব টেক্সটে কাজ করে */
+}
 @theme {
   --font-sans: "Anthropic Sans", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Anthropic Serif", sans-serif;
